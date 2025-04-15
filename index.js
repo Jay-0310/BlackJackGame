@@ -1,3 +1,7 @@
+if (!localStorage.getItem("playerName")) {
+    window.location.href = "welcome.html"
+}
+
 let player = {
     name: localStorage.getItem("playerName") || "Player",
     chips: 500
