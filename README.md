@@ -1,19 +1,21 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# 🃏 Blackjack Game
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+Welcome to my **first JavaScript project** — a simple and fun web-based **Blackjack game**! This project helped me practice core JavaScript concepts like DOM manipulation, event handling, game logic, and more.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## 🌐 Live Demo
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+👉 [Play the Game on Netlify](https://blackjackbyjay.netlify.app/)
 
-Happy Coding!
+## 🚀 Features
+
+- Collects the player’s name from a welcome page  
+- Interactive UI that displays cards, sum, and messages  
+- "Start Game" and "Draw New Card" buttons  
+- Basic Blackjack logic (try to get as close to 21 without going over)  
+- Mobile-friendly styling for smooth gameplay on any device
+
+## 🛠️ Built With
+
+- **HTML** - Structure  
+- **CSS** - Styling and responsiveness  
+- **JavaScript** - Game logic and interactivity  
