@@ -2,35 +2,58 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
     background-image: url("table.png");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-weight: bold;
     color: white;
     text-align: center;
-    margin-top: 50px;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 h1 {
     color: goldenrod;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 #message-el {
     font-style: italic;
     margin-bottom: 15px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+}
+
+#cards-el, #sum-el, #player-el {
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 button {
     color: #016f32;
-    width: 150px;
+    width: 80%;
+    max-width: 250px;
     background: goldenrod;
-    padding: 8px 0;
+    padding: 12px;
     font-weight: bold;
     border: none;
-    border-radius: 4px;
-    margin: 5px;
-    font-size: 1rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #d4a017;
 }
 
 button:disabled {
@@ -38,6 +61,20 @@ button:disabled {
     cursor: not-allowed;
 }
 
-.buttons {
-    margin-top: 20px;
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #message-el,
+    #cards-el,
+    #sum-el,
+    #player-el {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
 }
