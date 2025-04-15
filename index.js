@@ -1,3 +1,8 @@
+let player = {
+    name: localStorage.getItem("playerName") || "Player",
+    chips: 500
+}
+
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -15,13 +20,7 @@ playerEl.textContent = `${player.name}: $${player.chips}`
 
 function getRandomCard() {
     const randomNumber = Math.floor(Math.random() * 13) + 1
-    if (randomNumber > 10) {
-        return 10
-    } else if (randomNumber === 1) {
-        return 11
-    } else {
-        return randomNumber
-    }
+    return randomNumber > 10 ? 10 : randomNumber === 1 ? 11 : randomNumber
 }
 
 function startGame() {
@@ -50,7 +49,6 @@ function renderGame() {
 
     messageEl.textContent = message
     playerEl.textContent = `${player.name}: $${player.chips}`
-
     newCardBtn.disabled = !isAlive || hasBlackJack
 }
 
@@ -63,11 +61,6 @@ function newCard() {
     }
 }
 
-let player = {
-    name: localStorage.getItem("playerName") || "Player",
-    chips: 500
-}
-
 function resetGame() {
     cards = []
     sum = 0
@@ -78,4 +71,5 @@ function resetGame() {
     cardsEl.textContent = "Cards:"
     sumEl.textContent = "Sum:"
     newCardBtn.disabled = false
+    playerEl.textContent = `${player.name}: $${player.chips}`
 }
