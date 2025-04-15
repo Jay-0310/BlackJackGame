@@ -1,3 +1,4 @@
+/* Common styling */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
     background-image: url("table.png");
@@ -16,26 +17,7 @@ body {
 h1 {
     color: goldenrod;
     font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-#message-el {
-    font-style: italic;
     margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-#cards-el, #sum-el, #player-el {
-    font-size: 1.1rem;
-    margin: 8px 0;
-}
-
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
 }
 
 button {
@@ -50,6 +32,7 @@ button {
     font-size: 1.1rem;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin: 5px 0;
 }
 
 button:hover {
@@ -61,20 +44,34 @@ button:disabled {
     cursor: not-allowed;
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-    }
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    width: 80%;
+    max-width: 250px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
 
-    #message-el,
-    #cards-el,
-    #sum-el,
-    #player-el {
-        font-size: 1rem;
-    }
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
-    button {
-        font-size: 1rem;
-        padding: 10px;
-    }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

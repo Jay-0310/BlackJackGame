@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Blackjack</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>Welcome to Blackjack</h1>
+        <p>Enter your name to begin:</p>
+        <input type="text" id="player-name-input" placeholder="Your name..." />
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <script>
+        function startGame() {
+            const name = document.getElementById("player-name-input").value.trim()
+            if (name) {
+                localStorage.setItem("playerName", name)
+                window.location.href = "index.html"
+            } else {
+                alert("Please enter your name.")
+            }
+        }
+    </script>
+</body>
+</html>

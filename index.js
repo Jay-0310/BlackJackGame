@@ -1,8 +1,3 @@
-let player = {
-    name: "Jay",
-    chips: 200
-}
-
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -66,6 +61,11 @@ function newCard() {
         sum += card
         renderGame()
     }
+}
+
+let player = {
+    name: localStorage.getItem("playerName") || "Player",
+    chips: 500
 }
 
 function resetGame() {
